@@ -29,7 +29,7 @@ console.log(typeof str1);
 let bool1 = true;
 console.log(typeof bool1);
 
-let obj = {name: "Meet", age: 20};
+let obj = { name: "Meet", age: 20 };
 console.log(typeof obj);
 
 let arr = [1, 2, 3, 4, 5];
@@ -53,31 +53,9 @@ console.log(num3);
 
 // Feature Request:
 // 1. Variable Types Console Log: Write a script that declares varibles of different data types and logs both the value and type of each variable to the console.
-let num4 = 10;
-console.log(num4, typeof num4);
-
-let str2 = "Hello, Meet";
-console.log(str2, typeof str2);
-
-let bool2 = true;
-console.log(bool2, typeof bool2);
-
-let obj1 = {name: "Meet", age: 20};
-console.log(obj1, typeof obj1);
-
-let arr1 = [1, 2, 3, 4, 5];
-console.log(arr1, typeof arr1);
 
 // 2. Reassignment Demo: Create a script that demonstrates the difference in behavior between let and const when it comes to reassignmnet.
-let num5 = 10;
-console.log(num5);
-num5 = 20;
-console.log(num5);
 
-const num6 = 10;
-console.log(num6);
-num6 = 20;
-console.log(num6);
 
 // Achievement:
 // By the end of these activities, you will:
