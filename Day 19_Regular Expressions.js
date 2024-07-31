@@ -1,0 +1,102 @@
+// Day 19: Regular Expressions
+// Tasks/Activities:
+
+
+// Activity 1: Basic Regular Expressions
+// Task 1: Write a regular expression to match a simple pattern (e.g. match all occurrences of the word "JavaScript" in a string). Log the matches.
+const regex = /JavaScript/g;
+let str =
+    "This is course on JavaScript, to learn JavaScript and get better at JavaScript not Java";
+console.log(str.match(regex));
+
+// Task 2: Write a regular expression to match all digits in a string. Log the matches.
+const regex2 = /\d/g;
+let str2 = "This is 17 and 2 and this is not 58 and 9";
+console.log(str2.match(regex2));
+
+
+// Activity 2: Character Classes and Quantifiers
+// Task 3: Write a regular expression to match all words in a string that start with a capital letter. Log the matches.
+const regex3 = /\b[A-Z][a-zA-Z]*\b/g;
+let str3 = "The Quick Brown FOX Jumps Over the Lazy DOG";
+console.log(str3.match(regex3));
+
+// Task 4: Write a regular expression to match all sequences of one or more digits in a string. Log the matches.
+const regex4 = /\d+/g;
+console.log(str2.match(regex4));
+
+
+// Activity 3: Grouping and Capturing
+// Task 5: Write a regular expression to capture the area code, central office code, and line number from a US phone number format (e.g., (123) 456-7890). Log the captures.
+const regex5 = /\(?(\d{3})\)?[-.\s]?(\d{3})[-.\s]?(\d{4})/;
+const phoneNumber = "(123) 456-7890";
+const match = phoneNumber.match(regex5);
+if (match) {
+    const [fullMatch, areaCode, centralOfficeCode, lineNumber] = match;
+    console.log("Full Match:", fullMatch);
+    console.log("Area Code:", areaCode);
+    console.log("Central Office Code:", centralOfficeCode);
+    console.log("Line Number:", lineNumber);
+}
+
+// Task 6: Write a regular expression to capture the username and domain from an email address. Log the captures.
+const regex6 = /^([a-zA-Z0-9._-]+)@([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+const email = "user-name123@example-domain.com";
+const match1 = email.match(regex6);
+if (match1) {
+    const [fullEmail, username, domain] = match1;
+    console.log("Fullmatch:", fullEmail);
+    console.log("Username:", username);
+    console.log("Domain:", domain);
+}
+
+
+// Activity 4: Assertions and Boundaries
+// Task 7: Write a regular expression to match a word only if it is at the beginning of a string. Log the matches.
+const regex7 = /^\w+/;
+console.log(str.match(regex7));
+
+// Task 8: Write a regular expression to match a word only if it is at the end of a string. Log the matches.
+const regex8 = /\w+$/;
+console.log(str.match(regex8));
+
+
+// Activity 5 - Practical Applications
+// Task 9: Write a regular expression to validate a simple password (must include at least one uppercase letter, one lowercase letter, one digit, and one special character). Log whether the password is valid.
+const regex9 =
+    /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>/?]).+$/;
+let password = "Password123!";
+let password2 = "Password123";
+console.log(regex9.test(password));
+console.log(regex9.test(password2));
+
+// Task 10: Write a regular expression to validate a URL. Log whether the URL is valid.
+const regex10 =
+    /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+let url = "https://www.example.com";
+let url2 = "http://subdomain.example.co.uk/page";
+let url3 = "Iamnoturl/";
+console.log(regex10.test(url));
+console.log(regex10.test(url2));
+console.log(regex10.test(url3));
+
+
+// Feature Request:
+// 1. Basic Regex Script: Write a script that uses regular expressions to match simple patterns and log the matches.
+
+// 2. Character Classes and Quantifiers Script: Create a script that uses regular expressions to match words with specific characteristics and log the matches.
+
+// 3. Grouping and Capturing Script: Write a script that uses regular expressions to capture parts of a string, such as phone numbers and email addresses, and log the captures.
+
+// 4. Assertions and Boundaries Script: Create a script that uses regular expressions to match words at specific positions in a string and log the matches.
+
+// 5. Validation Script: Write a script that uses regular expressions to validate passwords and URLs and log whether they are valid.
+
+
+// Achievement:
+// By the end of these activities, you will:
+// Understand and create basic regular expressions.
+// Use character classes and quantifiers in regular expressions.
+// Implement grouping and capturing in regular expressions.
+// Apply assertions and boundaries in regular expressions.
+// Use regular expressions for practical applications like validating passwords and URLs.
