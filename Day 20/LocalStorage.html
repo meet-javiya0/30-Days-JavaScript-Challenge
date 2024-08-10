@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <form onsubmit="event.preventDefault(); addLocalStrageData();" method="post">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Login</button><br><br>
+    </form>
+    <div id="showData"></div>
+
+    <form onsubmit="event.preventDefault(); addLocalStrageData2();" method="post">
+        <label for="uName">User name:</label>
+        <input type="uName" id="uName" name="uName"><br><br>
+
+        <label for="email2">E-mail:</label>
+        <input type="email2" id="email2" name="email2"><br><br>
+
+        <button type="submit">Login2</button>
+    </form>
+    <div id="showData2"></div>
+
+    <script src="LocalStorage_and_SessionStorage.js"></script>
+</body>
+
+</html>
