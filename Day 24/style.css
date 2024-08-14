@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&family=Baloo+Bhai+2:wght@500&display=swap');
+
+* {
+    font-family: "Anek Devanagari", sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.weather-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+#city-input {
+    font-family: Arial, sans-serif;
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+#search-btn {
+    padding: 10px 15px 3px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.city-name {
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.weather-icon {
+    font-size: 40px;
+}
+
+.temperature {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+}
+
+.detail {
+    text-align: center;
+}
+
+.detail-icon {
+    font-size: 24px;
+}
+
+.weather-app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.forecast-container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    max-width: 100%;
+    display: none;
+}
+
+#forecast-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#forecast-table th,
+#forecast-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#forecast-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#forecast-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

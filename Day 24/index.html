@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="weather-app">
+        <div class="weather-card">
+            <div class="search-bar">
+                <input type="text" id="city-input" placeholder="Enter city name here">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="city-name" id="city-name">Surat</div>
+
+            <div class="weather-icon" id="weather-icon">
+                <i class="fas fa-cloud-sun"></i>
+            </div>
+
+            <div class="temperature" id="temperature">22°C</div>
+
+            <div class="description" id="description">Partly Cloudy</div>
+
+            <div class="details">
+                <div class="detail">
+                    <div class="detail-icon"><i class="fas fa-tint"></i></div>
+                    <div class="humidity" id="humidity">60%</div>
+                </div>
+
+                <div class="detail">
+                    <div class="detail-icon"><i class="fas fa-wind"></i></div>
+                    <div class="wind-speed" id="wind-speed">5 km/h</div>
+                </div>
+
+                <div class="detail">
+                    <div class="detail-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                    <div class="pressure" id="pressure">1015 hPa</div>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="forecast-container">
+            <table id="forecast-table">
+                <caption>Forecast of last 5 days:</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Temperature</th>
+                        <th>Condition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- JavaScript will dynamically insert rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
