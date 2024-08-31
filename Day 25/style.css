@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Navigation Bar */
+nav {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 5px;
+}
+
+.search-bar {
+    display: flex;
+}
+
+#search-input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Container for Movie Results and Details */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* Set up flex layout to align movie results and details side by side */
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 70vh;
+    /* Adjusted to ensure both sections fit well */
+}
+
+/* Movie Results Section */
+#movie-results-container {
+    flex: 2;
+    /* Takes up more space on the left */
+    overflow-y: auto;
+    /* Allow scrolling within the results */
+    padding-right: 20px;
+    /* Spacing between results and details */
+}
+
+.movie-results {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    display: flex;
+    /* Display as flex to align movie cards */
+}
+
+.movie-card {
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.movie-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.movie-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.movie-card p {
+    font-size: 14px;
+    color: #777;
+}
+
+.more-info-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.more-info-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Movie Detail Section */
+#movie-detail-container {
+    flex: 1;
+    /* Takes up less space on the right */
+    display: none;
+    /* Initially hidden */
+}
+
+.movie-detail {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.movie-detail h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.movie-detail img {
+    max-width: 200px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.movie-detail p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
